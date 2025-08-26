@@ -1,0 +1,258 @@
+/* 
+ * Sistema de Diseño Global - Ionic Variables and Theming
+ * Variables CSS globales para mantener consistencia en toda la aplicación
+ * For more info, please see: http://ionicframework.com/docs/theming/
+ */
+
+:root {
+  /* === COLORES PRINCIPALES === */
+  --ion-color-primary: #3D5A80;
+  --ion-color-primary-rgb: 61, 90, 128;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #364f71;
+  --ion-color-primary-tint: #506b8d;
+
+  --ion-color-secondary: #E0FBFC;
+  --ion-color-secondary-rgb: 224, 251, 252;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #c5ddde;
+  --ion-color-secondary-tint: #e3fbfc;
+
+  --ion-color-tertiary: #EE6C4D;
+  --ion-color-tertiary-rgb: 238, 108, 77;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #d15f44;
+  --ion-color-tertiary-tint: #f07b5f;
+
+  /* === COLORES DE ESTADO === */
+  --ion-color-success: #2dd55b;
+  --ion-color-success-rgb: 45, 213, 91;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #28bb50;
+  --ion-color-success-tint: #42d96b;
+
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  --ion-color-danger: #c5000f;
+  --ion-color-danger-rgb: 197, 0, 15;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #ad000d;
+  --ion-color-danger-tint: #cb1a27;
+
+  /* === COLORES NEUTROS === */
+  --ion-color-light: #f6f8fc;
+  --ion-color-light-rgb: 246, 248, 252;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d8dade;
+  --ion-color-light-tint: #f7f9fc;
+
+  --ion-color-medium: #5f5f5f;
+  --ion-color-medium-rgb: 95, 95, 95;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #545454;
+  --ion-color-medium-tint: #6f6f6f;
+
+  --ion-color-dark: #2f2f2f;
+  --ion-color-dark-rgb: 47, 47, 47;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #292929;
+  --ion-color-dark-tint: #444444;
+
+  /* === VARIABLES PERSONALIZADAS DEL PROYECTO === */
+  
+  /* Paleta de colores completa del proyecto */
+  --app-primary-color: #3D5A80;          /* Azul principal */
+  --app-primary-light: #98C1D9;          /* Azul claro */
+  --app-secondary-color: #E0FBFC;        /* Azul muy claro/blanco */
+  --app-accent-color: #EE6C4D;           /* Naranja/coral */
+  --app-dark-primary: #293241;           /* Azul muy oscuro */
+  --app-text-primary: #545B67;           /* Gris para texto */
+  --app-text-secondary: #767C85;         /* Gris claro para texto */
+  --app-background-main: #F6FFF8;        /* Fondo principal de la app */
+  
+  /* Transparencias útiles */
+  --app-primary-transparent: rgba(61, 90, 128, 0.1);
+  --app-primary-light-transparent: rgba(152, 193, 217, 0.2);
+  --app-secondary-transparent: rgba(224, 251, 252, 0.1);
+  --app-accent-transparent: rgba(238, 108, 77, 0.2);
+  --app-dark-transparent: rgba(41, 50, 65, 0.1);
+  
+  /* === TIPOGRAFÍA === */
+  --app-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --app-font-size-xs: 0.75rem;    /* 12px */
+  --app-font-size-sm: 0.875rem;   /* 14px */
+  --app-font-size-base: 1rem;     /* 16px */
+  --app-font-size-lg: 1.125rem;   /* 18px */
+  --app-font-size-xl: 1.25rem;    /* 20px */
+  --app-font-size-2xl: 1.5rem;    /* 24px */
+  --app-font-size-3xl: 1.875rem;  /* 30px */
+  
+  /* Pesos de fuente */
+  --app-font-weight-light: 300;
+  --app-font-weight-normal: 400;
+  --app-font-weight-medium: 500;
+  --app-font-weight-semibold: 600;
+  --app-font-weight-bold: 700;
+  
+  /* === ESPACIADO === */
+  --app-spacing-xs: 0.25rem;    /* 4px */
+  --app-spacing-sm: 0.5rem;     /* 8px */
+  --app-spacing-md: 1rem;       /* 16px */
+  --app-spacing-lg: 1.5rem;     /* 24px */
+  --app-spacing-xl: 2rem;       /* 32px */
+  --app-spacing-2xl: 3rem;      /* 48px */
+  --app-spacing-3xl: 4rem;      /* 64px */
+  
+  /* === BORDES === */
+  --app-border-radius-sm: 4px;
+  --app-border-radius-md: 8px;
+  --app-border-radius-lg: 12px;
+  --app-border-radius-xl: 16px;
+  --app-border-radius-full: 9999px;
+  
+  /* === SOMBRAS === */
+  --app-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --app-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --app-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --app-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* === TRANSICIONES === */
+  --app-transition-fast: 0.15s ease;
+  --app-transition-normal: 0.2s ease;
+  --app-transition-slow: 0.3s ease;
+  
+  /* === Z-INDEX === */
+  --app-z-dropdown: 1000;
+  --app-z-sticky: 1020;
+  --app-z-fixed: 1030;
+  --app-z-modal-backdrop: 1040;
+  --app-z-modal: 1050;
+  --app-z-popover: 1060;
+  --app-z-tooltip: 1070;
+  --app-z-toast: 1080;
+  
+  /* === DIMENSIONES === */
+  --app-sidebar-width: 280px;
+  --app-header-height: 56px;
+  --app-footer-height: 60px;
+  
+  /* === BREAKPOINTS (para uso en JavaScript) === */
+  --app-breakpoint-sm: 576px;
+  --app-breakpoint-md: 768px;
+  --app-breakpoint-lg: 992px;
+  --app-breakpoint-xl: 1200px;
+}
+
+/* === CLASES UTILITARIAS === */
+
+/* Colores de texto */
+.text-primary { color: var(--app-primary-color) !important; }
+.text-primary-light { color: var(--app-primary-light) !important; }
+.text-secondary { color: var(--app-secondary-color) !important; }
+.text-accent { color: var(--app-accent-color) !important; }
+.text-dark { color: var(--app-dark-primary) !important; }
+.text-main { color: var(--app-text-primary) !important; }
+.text-light { color: var(--app-text-secondary) !important; }
+
+/* Colores de fondo */
+.bg-primary { background-color: var(--app-primary-color) !important; }
+.bg-primary-light { background-color: var(--app-primary-light) !important; }
+.bg-secondary { background-color: var(--app-secondary-color) !important; }
+.bg-accent { background-color: var(--app-accent-color) !important; }
+.bg-dark { background-color: var(--app-dark-primary) !important; }
+.bg-main { background-color: var(--app-background-main) !important; }
+
+/* Espaciado */
+.m-xs { margin: var(--app-spacing-xs) !important; }
+.m-sm { margin: var(--app-spacing-sm) !important; }
+.m-md { margin: var(--app-spacing-md) !important; }
+.m-lg { margin: var(--app-spacing-lg) !important; }
+.m-xl { margin: var(--app-spacing-xl) !important; }
+
+.p-xs { padding: var(--app-spacing-xs) !important; }
+.p-sm { padding: var(--app-spacing-sm) !important; }
+.p-md { padding: var(--app-spacing-md) !important; }
+.p-lg { padding: var(--app-spacing-lg) !important; }
+.p-xl { padding: var(--app-spacing-xl) !important; }
+
+/* Bordes redondeados */
+.rounded-sm { border-radius: var(--app-border-radius-sm) !important; }
+.rounded-md { border-radius: var(--app-border-radius-md) !important; }
+.rounded-lg { border-radius: var(--app-border-radius-lg) !important; }
+.rounded-xl { border-radius: var(--app-border-radius-xl) !important; }
+.rounded-full { border-radius: var(--app-border-radius-full) !important; }
+
+/* Sombras */
+.shadow-sm { box-shadow: var(--app-shadow-sm) !important; }
+.shadow-md { box-shadow: var(--app-shadow-md) !important; }
+.shadow-lg { box-shadow: var(--app-shadow-lg) !important; }
+.shadow-xl { box-shadow: var(--app-shadow-xl) !important; }
+
+/* Transiciones */
+.transition-fast { transition: all var(--app-transition-fast) !important; }
+.transition-normal { transition: all var(--app-transition-normal) !important; }
+.transition-slow { transition: all var(--app-transition-slow) !important; }
+
+/* === OVERRIDES GLOBALES DE IONIC === */
+
+/* Fondo principal de toda la aplicación */
+ion-app {
+  --background: var(--app-background-main);
+}
+
+ion-content {
+  --background: var(--app-background-main);
+}
+
+/* Personalización global de componentes Ionic */
+ion-toolbar {
+  --background: var(--app-primary-color);
+  --color: var(--app-secondary-color);
+}
+
+ion-tab-bar {
+  --background: var(--app-primary-color);
+  --color: var(--app-secondary-color);
+}
+
+ion-button {
+  --border-radius: var(--app-border-radius-md);
+}
+
+/* Hover effects globales */
+.hover-effect {
+  transition: var(--app-transition-normal);
+}
+
+.hover-effect:hover {
+  background-color: var(--app-accent-transparent);
+  color: var(--app-accent-color);
+  transform: translateX(var(--app-spacing-xs));
+}
+
+/* === RESPONSIVE UTILITIES === */
+@media (max-width: 576px) {
+  :root {
+    --app-sidebar-width: 240px;
+    --app-font-size-base: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --app-sidebar-width: 300px;
+  }
+}

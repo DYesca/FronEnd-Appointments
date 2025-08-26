@@ -1,0 +1,251 @@
+@import '../../../theme/variables.css';
+
+/* === HEADER === */
+.custom-header {
+  --background: var(--app-primary-color);
+  --color: var(--app-secondary-color);
+  --border-width: 0;
+}
+
+.header-title {
+  text-align: center;
+  font-weight: var(--app-font-weight-bold);
+  color: var(--app-secondary-color);
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: var(--app-spacing-lg);
+}
+
+/* === LOGO === */
+.app-logo {
+  text-align: center;
+  margin-bottom: var(--app-spacing-2xl);
+}
+
+.logo-icon {
+  font-size: 4rem;
+  color: var(--app-primary-color);
+  margin-bottom: var(--app-spacing-md);
+}
+
+.app-title {
+  color: var(--app-primary-color);
+  font-size: var(--app-font-size-2xl);
+  font-weight: var(--app-font-weight-bold);
+  margin: 0;
+}
+
+.app-subtitle {
+  color: var(--app-text-primary);
+  font-size: var(--app-font-size-sm);
+  margin: var(--app-spacing-sm) 0 0 0;
+}
+
+/* === FORMULARIO TRADICIONAL === */
+.register-form {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  margin-top: var(--app-spacing-xl);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  background-color: white;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--app-primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+}
+
+.form-input.input-error {
+  border-color: var(--ion-color-danger);
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  padding-right: 45px !important;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.password-toggle-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.password-toggle-btn ion-icon {
+  font-size: 20px;
+}
+
+.error-message {
+  color: var(--ion-color-danger);
+  font-size: 0.875rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.general-error {
+  background: rgba(var(--ion-color-danger-rgb), 0.1);
+  border: 1px solid var(--ion-color-danger);
+  border-radius: var(--app-border-radius-md);
+  padding: var(--app-spacing-sm);
+  margin: var(--app-spacing-md) 0;
+  text-align: center;
+}
+
+/* === BOTÓN DE REGISTRO === */
+.register-btn {
+  margin-top: var(--app-spacing-xl);
+  --background: var(--app-accent-color);
+  --color: white;
+  --border-radius: var(--app-border-radius-lg);
+  height: 56px;
+  font-weight: var(--app-font-weight-bold);
+  margin-bottom: var(--app-spacing-md);
+}
+
+.loading-icon {
+  animation: spin 1s linear infinite;
+  margin-right: var(--app-spacing-xs);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* === ENLACE A LOGIN === */
+.login-link {
+  text-align: center;
+  color: var(--app-text-primary);
+  font-size: var(--app-font-size-sm);
+  margin-top: var(--app-spacing-md);
+}
+
+.link {
+  color: var(--app-accent-color);
+  text-decoration: none;
+  font-weight: var(--app-font-weight-medium);
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* === MODAL DE ÉXITO === */
+.success-header {
+  --background: var(--app-accent-color);
+  --color: white;
+}
+
+.success-content {
+  text-align: center;
+  padding: var(--app-spacing-2xl);
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: var(--app-accent-color);
+  margin-bottom: var(--app-spacing-lg);
+}
+
+.success-content h2 {
+  color: var(--app-primary-color);
+  font-size: var(--app-font-size-xl);
+  font-weight: var(--app-font-weight-bold);
+  margin: 0 0 var(--app-spacing-md) 0;
+}
+
+.success-content p {
+  color: var(--app-text-primary);
+  font-size: var(--app-font-size-base);
+  margin: 0 0 var(--app-spacing-xl) 0;
+  line-height: 1.5;
+}
+
+.success-btn {
+  --background: var(--app-accent-color);
+  --color: white;
+  --border-radius: var(--app-border-radius-lg);
+  height: 48px;
+  font-weight: var(--app-font-weight-bold);
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 576px) {
+  .register-container {
+    padding: var(--app-spacing-md);
+  }
+  
+  .register-form {
+    padding: 20px;
+  }
+  
+  .form-input {
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: var(--app-font-size-xl);
+  }
+  
+  .logo-icon {
+    font-size: 3.5rem;
+  }
+}

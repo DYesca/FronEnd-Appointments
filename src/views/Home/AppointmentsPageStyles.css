@@ -1,0 +1,533 @@
+@import '../../theme/variables.css';
+
+/* === APPOINTMENTS PAGE STYLES === */
+
+/* Contenedor principal */
+.appointments-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--app-spacing-md);
+  min-height: 100vh;
+}
+
+/* Header section */
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--app-spacing-sm);
+  margin-bottom: var(--app-spacing-xl);
+  position: relative;
+}
+
+.page-title {
+  color: var(--app-primary-color);
+  font-size: var(--app-font-size-xl);
+  font-weight: var(--app-font-weight-bold);
+  margin: 0;
+  text-align: center;
+}
+
+.info-button {
+  --color: var(--app-accent-color);
+  --border-radius: 50%;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  position: absolute;
+  right: -40px;
+}
+
+.info-button ion-icon {
+  font-size: 1.5rem;
+}
+
+/* Calendario */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--app-spacing-lg);
+}
+
+.custom-datetime {
+  --background: var(--app-secondary-color);
+  --color: var(--app-text-primary);
+  border-radius: var(--app-border-radius-md);
+  box-shadow: var(--app-shadow-md);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Estilos para el calendario personalizado */
+.custom-datetime::part(calendar-day) {
+  border-radius: 50%;
+  font-weight: var(--app-font-weight-medium);
+}
+
+.custom-datetime::part(calendar-day-today) {
+  background: var(--app-primary-color);
+  color: var(--app-secondary-color);
+  font-weight: var(--app-font-weight-bold);
+}
+
+/* Días destacados con citas - se aplicará automáticamente vía highlightedDates */
+.custom-datetime::part(calendar-day-highlighted) {
+  font-weight: var(--app-font-weight-bold);
+  box-shadow: 0 2px 8px rgba(238, 108, 77, 0.3);
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efecto hover para días con citas */
+.custom-datetime::part(calendar-day-highlighted):hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.4);
+}
+
+/* === MODAL STYLES === */
+
+.modal-header {
+  --background: var(--app-primary-color);
+  --color: var(--app-secondary-color);
+}
+
+.modal-header ion-title {
+  color: var(--app-secondary-color);
+  font-weight: var(--app-font-weight-bold);
+}
+
+.modal-content {
+  --background: var(--app-background-color);
+  padding: var(--app-spacing-md);
+}
+
+/* Resumen de citas */
+.appointments-summary {
+  min-height: 300px;
+}
+
+.no-appointments {
+  text-align: center;
+  padding: var(--app-spacing-2xl);
+  color: var(--app-text-secondary);
+}
+
+.no-appointments-icon {
+  font-size: 4rem;
+  color: var(--app-accent-color);
+  margin-bottom: var(--app-spacing-md);
+}
+
+.no-appointments h3 {
+  color: var(--app-text-primary);
+  font-size: var(--app-font-size-lg);
+  margin: var(--app-spacing-md) 0 var(--app-spacing-sm) 0;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-spacing-md);
+}
+
+.appointment-card {
+  background: var(--app-secondary-color);
+  border-radius: var(--app-border-radius-md);
+  padding: var(--app-spacing-md);
+  box-shadow: var(--app-shadow-sm);
+  border-left: 4px solid var(--app-accent-color);
+  display: flex;
+  align-items: center;
+  gap: var(--app-spacing-md);
+}
+
+.appointment-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.date-icon {
+  font-size: 1.5rem;
+  color: var(--app-primary-color);
+  margin-bottom: var(--app-spacing-xs);
+}
+
+.date-text {
+  font-size: var(--app-font-size-sm);
+  color: var(--app-text-secondary);
+  font-weight: var(--app-font-weight-medium);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.appointment-info {
+  flex: 1;
+}
+
+.provider-name {
+  color: var(--app-primary-color);
+  font-size: var(--app-font-size-base);
+  font-weight: var(--app-font-weight-bold);
+  margin: 0 0 var(--app-spacing-xs) 0;
+}
+
+.service-type {
+  color: var(--app-text-primary);
+  font-size: var(--app-font-size-sm);
+  margin: 0 0 var(--app-spacing-xs) 0;
+}
+
+.appointment-time {
+  color: var(--app-accent-color);
+  font-size: var(--app-font-size-sm);
+  font-weight: var(--app-font-weight-medium);
+}
+
+.appointment-status {
+  display: flex;
+  align-items: center;
+}
+
+/* Detalles de cita específica */
+.appointment-detail {
+  padding: var(--app-spacing-md);
+}
+
+.detail-card {
+  background: var(--app-secondary-color);
+  border-radius: var(--app-border-radius-lg);
+  padding: var(--app-spacing-lg);
+  box-shadow: var(--app-shadow-md);
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--app-spacing-md);
+  margin-bottom: var(--app-spacing-lg);
+  padding-bottom: var(--app-spacing-md);
+  border-bottom: 2px solid var(--app-accent-color);
+}
+
+.detail-icon {
+  font-size: 2rem;
+  color: var(--app-primary-color);
+}
+
+.detail-header h2 {
+  color: var(--app-primary-color);
+  font-size: var(--app-font-size-lg);
+  font-weight: var(--app-font-weight-bold);
+  margin: 0;
+  flex: 1;
+}
+
+.detail-body {
+  margin-bottom: var(--app-spacing-lg);
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--app-spacing-md);
+  margin-bottom: var(--app-spacing-md);
+  padding: var(--app-spacing-md);
+  background: rgba(var(--app-primary-color-rgb), 0.05);
+  border-radius: var(--app-border-radius-sm);
+}
+
+.item-icon {
+  font-size: 1.25rem;
+  color: var(--app-accent-color);
+  margin-top: 2px;
+  min-width: 20px;
+}
+
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-spacing-xs);
+}
+
+.item-label {
+  color: var(--app-text-secondary);
+  font-size: var(--app-font-size-sm);
+  font-weight: var(--app-font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.item-value {
+  color: var(--app-text-primary);
+  font-size: var(--app-font-size-base);
+  font-weight: var(--app-font-weight-medium);
+}
+
+.detail-actions {
+  padding-top: var(--app-spacing-md);
+  border-top: 1px solid rgba(var(--app-primary-color-rgb), 0.1);
+}
+
+.detail-actions ion-button {
+  --border-radius: var(--app-border-radius-md);
+  font-weight: var(--app-font-weight-bold);
+  height: 48px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .appointments-container {
+    padding: var(--app-spacing-sm);
+  }
+  
+  .header-section {
+    flex-direction: column;
+    gap: var(--app-spacing-xs);
+  }
+  
+  .info-button {
+    position: static;
+    right: auto;
+  }
+  
+  .page-title {
+    font-size: var(--app-font-size-lg);
+  }
+  
+  .appointment-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .appointment-date {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .detail-card {
+    padding: var(--app-spacing-md);
+  }
+  
+  .detail-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Estados hover para interactividad */
+@media (hover: hover) {
+  .appointment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--app-shadow-md);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .info-button:hover {
+    --color: var(--app-primary-color);
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+/* === ESTILOS DEL POPOVER DEL PERFIL === */
+/* Asegurar que el popover se vea igual que en HomePage */
+ion-popover ion-list {
+  padding: 0;
+  background: var(--app-secondary-color);
+}
+
+ion-popover ion-item {
+  --padding-start: var(--app-spacing-sm);
+  --min-height: 40px;
+  font-size: var(--app-font-size-sm);
+  --background: transparent;
+  --color: var(--app-primary-color);
+  transition: var(--app-transition-fast);
+}
+
+ion-popover ion-item:hover {
+  --background: var(--app-accent-transparent);
+  --color: var(--app-accent-color);
+}
+
+ion-popover ion-icon {
+  margin-right: var(--app-spacing-sm);
+  font-size: var(--app-font-size-base);
+  color: var(--app-primary-color);
+  transition: var(--app-transition-fast);
+}
+
+ion-popover ion-item:hover ion-icon {
+  color: var(--app-accent-color);
+}
+
+ion-popover .profile-title {
+  font-weight: var(--app-font-weight-bold);
+  text-align: center;
+  padding: var(--app-spacing-sm);
+  color: var(--app-primary-color) !important;
+  font-size: var(--app-font-size-base);
+  background: var(--app-primary-transparent);
+  border-bottom: 1px solid var(--app-primary-transparent);
+  text-transform: none; /* Asegurar que no hay mayúsculas automáticas */
+}
+
+ion-popover ion-label {
+  text-transform: none !important; /* Quitar cualquier transformación de texto a mayúsculas */
+}
+
+/* === ESTILOS PARA MÚLTIPLES CITAS === */
+
+/* Resumen del día para múltiples citas */
+.day-summary {
+  text-align: center;
+  margin-bottom: var(--app-spacing-lg);
+  padding: var(--app-spacing-md);
+  background: var(--app-primary-transparent);
+  border-radius: var(--app-border-radius-lg);
+  border: 1px solid var(--app-primary-color);
+}
+
+.day-summary h3 {
+  color: var(--app-primary-color);
+  font-size: var(--app-font-size-lg);
+  font-weight: var(--app-font-weight-bold);
+  margin: 0 0 var(--app-spacing-xs) 0;
+}
+
+.day-summary p {
+  color: var(--app-text-secondary);
+  font-size: var(--app-font-size-sm);
+  margin: 0;
+}
+
+/* Cards para múltiples citas */
+.detail-card.multiple-appointments {
+  margin-bottom: var(--app-spacing-lg);
+  border: 2px solid var(--app-primary-light);
+  border-radius: var(--app-border-radius-lg);
+}
+
+.detail-card.multiple-appointments:not(:last-child) {
+  border-bottom: 2px solid var(--app-primary-color);
+}
+
+/* Contador de citas */
+.appointment-counter {
+  background: var(--app-accent-color);
+  color: white;
+  padding: var(--app-spacing-xs) var(--app-spacing-sm);
+  border-radius: var(--app-border-radius-md);
+  font-size: var(--app-font-size-xs);
+  font-weight: var(--app-font-weight-bold);
+  margin-left: auto;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--app-spacing-sm);
+}
+
+.detail-header h2 {
+  flex: 1;
+  margin: 0;
+}
+
+/* Espaciado mejorado para múltiples citas */
+.multiple-appointments .detail-actions {
+  border-top: 1px solid var(--app-primary-light);
+  padding-top: var(--app-spacing-md);
+  margin-top: var(--app-spacing-md);
+}
+
+/* Animaciones para citas canceladas */
+.detail-card.cancelled {
+  opacity: 0.6;
+  transform: scale(0.98);
+  transition: all var(--app-transition-normal);
+}
+
+/* Indicador visual para citas múltiples en el calendario */
+.appointments-container .custom-datetime::part(calendar-day) {
+  position: relative;
+}
+
+/* Responsive para múltiples citas */
+@media (max-width: 768px) {
+  .detail-card.multiple-appointments {
+    margin-bottom: var(--app-spacing-md);
+  }
+  
+  .day-summary {
+    padding: var(--app-spacing-sm);
+  }
+  
+  .appointment-counter {
+    font-size: var(--app-font-size-xs);
+    padding: 2px var(--app-spacing-xs);
+  }
+}
+
+/* === INDICADORES DE ESTADO === */
+
+/* Contenedor de carga */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--app-spacing-2xl);
+  text-align: center;
+  min-height: 200px;
+}
+
+.loading-container ion-spinner {
+  margin-bottom: var(--app-spacing-md);
+  --color: var(--app-primary-color);
+}
+
+.loading-container p {
+  color: var(--app-text-secondary);
+  font-size: var(--app-font-size-sm);
+  margin: 0;
+}
+
+/* Contenedor de error */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--app-spacing-2xl);
+  text-align: center;
+  min-height: 200px;
+  background: rgba(var(--ion-color-danger-rgb), 0.05);
+  border-radius: var(--app-border-radius-lg);
+  border: 1px solid rgba(var(--ion-color-danger-rgb), 0.2);
+}
+
+.error-container ion-icon {
+  font-size: 3rem;
+  margin-bottom: var(--app-spacing-md);
+  color: var(--ion-color-danger);
+}
+
+.error-container p {
+  color: var(--ion-color-danger);
+  font-size: var(--app-font-size-sm);
+  margin: 0 0 var(--app-spacing-md) 0;
+  max-width: 300px;
+}
+
+.error-container ion-button {
+  --border-color: var(--ion-color-danger);
+  --color: var(--ion-color-danger);
+}

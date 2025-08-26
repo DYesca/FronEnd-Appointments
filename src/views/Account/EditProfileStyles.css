@@ -1,0 +1,196 @@
+
+/* Estilos específicos para EditProfile */
+.profile-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: var(--app-dark-primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border: 4px solid var(--app-primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.data-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--app-border-color, #e0e0e0);
+}
+
+.form-item {
+  --border-color: var(--app-border-color, #e0e0e0);
+  --color: var(--app-text-color);
+  margin-bottom: 8px;
+}
+
+.form-item ion-label {
+  color: var(--app-primary-color);
+  font-weight: 600;
+}
+
+.form-item ion-input {
+  --color: var(--app-text-color);
+  --placeholder-color: var(--app-text-muted);
+}
+
+.button-container {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+}
+
+.save-button {
+  --background: var(--app-primary-color);
+  --color: white;
+  --border-radius: 12px;
+  font-weight: 600;
+  text-transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.clear-button {
+  --background: var(--app-background-alt, #f5f5f5);
+  --color: var(--app-text-color);
+  --border-radius: 12px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+/* Estilos del modal de foto personalizado */
+.profile-photo-modal {
+  --width: 90%;
+  --max-width: 400px;
+  --height: auto;
+  --border-radius: 16px;
+  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content-custom {
+  padding: 0;
+  background: transparent;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  background: white;
+  border-radius: 16px;
+  min-height: 100%;
+}
+
+.modal-photo-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-avatar-large {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  border: 4px solid var(--app-primary-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modal-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--app-dark-primary, #293241);
+  border-radius: 12px;
+  padding: 12px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-action-button {
+  --color: var(--app-accent-color, #EE6C4D);
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  margin: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.modal-action-button:hover {
+  --background: rgba(238, 108, 77, 0.1);
+  transform: scale(1.05);
+}
+
+.modal-action-button ion-icon {
+  font-size: 1.4rem;
+}
+
+/* Popover consistency */
+ion-popover .profile-title {
+  text-transform: none !important;
+  font-weight: 600;
+  color: var(--app-primary-color);
+  padding: 8px 16px;
+  margin: 0;
+}
+
+ion-popover ion-label {
+  text-transform: none !important;
+  color: var(--app-text-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-photo-modal {
+    --width: 95%;
+    --max-width: 350px;
+  }
+  
+  .modal-container {
+    padding: 24px 16px;
+  }
+  
+  .modal-avatar-large {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .modal-buttons-container {
+    padding: 10px 6px;
+  }
+  
+  .modal-action-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .modal-action-button ion-icon {
+    font-size: 1.2rem;
+  }
+}

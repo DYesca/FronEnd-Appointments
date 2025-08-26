@@ -1,0 +1,38 @@
+/* Estilos para el TabBar */
+ion-tab-bar {
+  --background: var(--app-primary-color); /* Fondo del tab bar */
+  --color: var(--app-secondary-color); /* Color de iconos y texto normal */
+  --color-selected: var(--app-accent-color); /* Color cuando está seleccionado */
+  --border-color: var(--app-primary-color); /* Color del borde */
+}
+
+ion-tab-button {
+  --color: var(--app-secondary-color); /* Color normal de iconos y texto */
+  --color-selected: var(--app-accent-color); /* Color cuando está seleccionado */
+  --color-hover: var(--app-accent-color); /* Color en hover */
+  --ripple-color: var(--app-accent-color); /* Color del efecto ripple */
+}
+
+/* Hover effect personalizado */
+ion-tab-button:hover {
+  --color: var(--app-accent-color);
+}
+
+/* Efecto para el tab activo */
+ion-tab-button.tab-selected {
+  --color: var(--app-accent-color);
+}
+
+/* Estilos adicionales para mejor apariencia */
+ion-tab-button ion-icon {
+  color: var(--color);
+}
+
+ion-tab-button ion-label {
+  color: var(--color);
+}
+
+ion-tab-button.tab-selected ion-icon,
+ion-tab-button.tab-selected ion-label {
+  color: var(--app-accent-color);
+}

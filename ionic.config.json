@@ -1,0 +1,7 @@
+{
+  "name": "Web_App_Profecionales",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
